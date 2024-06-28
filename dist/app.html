@@ -1,1 +1,18 @@
-
+<html>
+    <head>
+        <script>
+            async function fetchData() {
+                const url = 'web3://0xf14e64285Db115D3711cC5320B37264708A47f89:11155111/greeting';
+                const response = await fetch(url);
+                const data = await response.text();
+                document.getElementById('content').textContent = data;
+            }
+            window.onload = fetchData;
+        </script>
+    </head>
+    <body>
+        <div id="content"> Loading greeting... </div>
+        <br>
+        <img src="./degen.jpeg" alt="">
+    </body>
+</html>
